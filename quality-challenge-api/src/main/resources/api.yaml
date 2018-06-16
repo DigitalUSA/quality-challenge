@@ -1,0 +1,125 @@
+swagger: "2.0"
+info:
+  description: "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters."
+  version: "1.0.0"
+  title: "Quality Challenge"
+  contact:
+    email: "apiteam@swagger.io"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "petstore.swagger.io"
+basePath: "/v2"
+schemes:
+- "http"
+paths:
+  /circle/point/inside:
+    post:
+      operationId: "insidePointCircle"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "request"
+        required: true
+        schema:
+          $ref: "#/definitions/CircleRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Response"
+        405:
+          description: "Invalid input"
+  /polygon/point/inside:
+    get:
+      operationId: "insideRegularPolygon"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "query"
+        name: "x"
+        type: "integer"
+      - in: "query"
+        name: "y"
+        type: "integer"
+      - in: "query"
+        name: "n"
+        type: "integer"
+      - in: "query"
+        name: "r"
+        type: "integer"
+      - in: "query"
+        name: "xOffset"
+        type: "integer"
+      - in: "query"
+        name: "yOffset"
+        type: "integer"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Response"
+        405:
+          description: "Invalid input"
+    post:
+      operationId: "pointPolygon"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        required: true
+        schema:
+          $ref: "#/definitions/PolygonRequest"
+      responses:
+        200:
+          description: "Success"
+          schema:
+            $ref: "#/definitions/Response"
+        405:
+          description: "Invalid input"
+  
+definitions:
+  CircleRequest:
+    type: "object"
+    properties:
+      x:
+        type: "integer"
+      y:
+        type: "integer"
+      pointX:
+        type: "integer"
+      pointY:
+        type: "integer"
+      r:
+        type: "integer"
+      d:
+        type: "integer"
+
+  PolygonRequest:
+    type: "object"
+    properties:
+      x:
+        type: "array"
+        items:
+          type: "integer"
+      y:
+        type: "array"
+        items:
+          type: "integer"
+      pointX:
+        type: "integer"
+      pointY:
+        type: "integer"
+
+  Response:
+    type: object
+    properties:
+      inside:
+        type: boolean
+      
