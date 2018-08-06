@@ -2,7 +2,7 @@
 
 - _Prepared by_: Digital Consulting INC.
 - _Prepared for_: Questionable Quality Software
-- _Date_: July 1st, 2018
+- _Date_: April 1st, 2018
 - _Content_: Final delivery report
 
 We want to thank Questionable Quality Software for the opportunity to work with them in this prohect. I would like to highlights the level of quality that this progect has managed to deliver:
