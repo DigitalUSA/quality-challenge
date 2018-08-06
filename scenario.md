@@ -12,11 +12,6 @@ The consulting company delivered the software on Apr 1st with [this](deliver-rep
 
 QQs has numerous concerns about the software they received as numerous unexplained errors are occuring in initial testing and this is blocking further work with Microservices. The leadership at QQs are also losing confidence in the teams ability to delivery.
 
-As a last ditch effort QQs are again reaching out to consultants and your team came highly recommended:
-
-> The experts the transformers turn to
-_- Optimus Prime_
-
-Your team is in high demand and charges an astronomically expensive rate and so QQs can only afford your services for a few hours. You're between assignments so can work with QQs before you move on to your next major assignment; some issue with WOPR ...
+As a last ditch effort QQs are again reaching out to you as a consultant to help them.
 
 Your mission is to review the delivered artifacts from the original consulting firm and produce a report. That report should contain a list of issues found, recommendations for process & tooling and any fixes and improvements that can be made immediately.
